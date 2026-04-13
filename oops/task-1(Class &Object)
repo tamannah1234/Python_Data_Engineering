@@ -1,0 +1,19 @@
+class student:
+    def __init__(self,name,grade,percentage,team):
+        self.name = name
+        self.grade = grade
+        self.percentage = percentage
+        self.team = team
+    def student_details(self):
+        print(f"student is {self.name} in a team {self.team}, having {self.grade} grade and {self.percentage}")
+        
+        
+team1 = 'A'
+team2 = 'B'
+
+#studnet object
+student1 = student("Tamanna",'A','85%',team1)
+student2 = student("Lakshya",'B','86%',team2)
+
+student1.student_details()
+student2.student_details()
