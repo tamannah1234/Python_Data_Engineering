@@ -1,0 +1,29 @@
+import math
+print("Hello World")
+# 1] string ="happy learning" o/p: "Learning happy"
+
+str = "Happy Learning"
+words_list = str.split()
+reverse_words = words_list[::-1]
+res = " ".join(reverse_words)
+print(res)
+
+class square:
+    def __init__(self,side):
+        self.side = side
+    def area(self):
+        return self.side*self.side
+
+class circle:
+    def __init__(self,radius):
+        self.radius = radius
+    def area(self):
+        return round(math.pi*self.radius*self.radius,2)
+
+sq = square(5)
+ci = circle(7)
+
+print(sq.area())
+print(ci.area())
+        
+    
