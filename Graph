@@ -1,0 +1,22 @@
+# Graph implementation using adjacency list
+class Graph:
+    def __init__(self,vertices):
+        self.v = vertices
+        self.graph = {}
+        
+        for i in range(vertices):
+            self.graph[i]=[]
+    def add_edges(self,u,v):
+        self.graph[u].append(v)
+        self.graph[v].append(u)
+        
+    def display(self):
+        for node in self.graph:
+            print(f"{node} -> {self.graph[node]}")
+g = Graph(3)
+
+g.add_edges(1,2)
+g.add_edges(0,2)
+g.add_edges(0,1)
+
+g.display()
