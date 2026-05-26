@@ -1,0 +1,58 @@
+#Day 1 — Arrays Basics
+arr = [1,2,3,4,5,6]
+for i in arr:
+    print(i)
+    
+name = ["Tom","Harry","John"]
+for str in range(len(name)):
+    print(name[str])
+for index,value in enumerate(arr):
+    print(index,value)
+#reverse arr
+for i in range(len(arr)-1,-1,-1):
+    print(arr[i])
+    
+# Problems 
+num = [10,20,30]
+total =0
+for nums in num:
+    total += nums
+print(total)
+
+# Maximum
+arr1 = [10,20,30,40,100]
+max = arr1[0]
+for num in arr1:
+    if num>max:
+        max = num
+print(max)
+
+#Count occurence
+arr2 = [1,2,1,2,1]
+cnt = 0
+for i in arr2:
+    if i==1:
+        cnt+=1
+print(cnt)
+
+#Linear Search 
+arr3 = [1,2,3,4,5,6,7,8,10]
+target = 10
+flag=False
+
+for i in arr3:
+    if i==target:
+        flag= True
+        break
+print(flag)
+
+
+
+#Prefix sum 
+arr4=[1,2,3,4,5,6,7]
+n = len(arr4)
+prefix = [0]*n
+prefix[0]=arr4[0]
+for i in range(1,n):
+    prefix[i]=prefix[i-1]+arr4[i]
+print(prefix)
