@@ -1,0 +1,18 @@
+class Solution:
+    #m => no of students n = available chocolates
+    def findMinDiff(self, arr, m):
+        # code here
+        n = len(arr)
+        
+        res = float('inf')
+        arr.sort()
+        if m==0 or n ==0:
+            return 0
+        if m>n:
+            return -1
+        for i in range(n-m+1):
+            minElement = arr[i]
+            maxElement = arr[i+m-1]
+            res = min(res,maxElement - minElement)
+        return res
+            
