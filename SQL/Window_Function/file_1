@@ -23,11 +23,15 @@ Values
 --over
 SELECT employee, salary, Avg(salary)  over() as Avg_salary
 From Employees;
+
+
 --partition by
 SELECT employee, department,salary,
 Max(salary) over(partition by department) as Max_salary
 FROM employees
 order by Max_salary Desc;
+
+
 --Row Number
 SELECT employee, department,salary,
 Row_Number() over(order by salary Desc) as Rank_salary
@@ -38,4 +42,25 @@ Row_Number() over(partition by department
 order by salary Desc) as Rank_salary
 FROM employees;
 
+
+--Rank_salary
+SELECT
+    employee,
+    salary,
+    RANK() OVER (
+        ORDER BY salary DESC
+    ) AS rank_no
+FROM employees;
+
+
+
+--Dense Rank
+SELECT
+employee,
+    salary,
+    DENSE_RANK() OVER (ORDER BY salary DESC) AS dr
+FROM employees;
+
+--RANK() counts rows before you, so ties create gaps.
+--DENSE_RANK() counts distinct values before you, so ties do not create gaps.
 
