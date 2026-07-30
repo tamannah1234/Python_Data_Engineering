@@ -1,0 +1,41 @@
+Create Table Employees(
+emp_id int,
+employee varchar(50),
+department varchar(20),
+salary decimal (10,2)
+);
+Insert Into Employees(
+emp_id ,
+employee ,
+department ,
+salary
+)
+Values
+(1, 'Alice', 'IT', 100000),
+    (2, 'Bob', 'IT', 90000),
+    (3, 'Charlie', 'IT', 90000),
+    (4, 'David', 'HR', 80000),
+    (5, 'Emma', 'HR', 70000),
+    (6, 'Frank', 'Sales', 95000),
+    (7, 'Grace', 'Sales', 85000);
+
+
+--over
+SELECT employee, salary, Avg(salary)  over() as Avg_salary
+From Employees;
+--partition by
+SELECT employee, department,salary,
+Max(salary) over(partition by department) as Max_salary
+FROM employees
+order by Max_salary Desc;
+--Row Number
+SELECT employee, department,salary,
+Row_Number() over(order by salary Desc) as Rank_salary
+FROM employees;
+
+SELECT employee, department,salary,
+Row_Number() over(partition by department 
+order by salary Desc) as Rank_salary
+FROM employees;
+
+
