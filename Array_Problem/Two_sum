@@ -1,0 +1,14 @@
+class two_sum:
+    def two_sums(self,nums,target):
+        seen = {} #hash
+        for i, num in enumerate(nums):
+            need = target- num
+            if need in seen:
+                return (seen[need],i)
+            seen[num]=i
+            
+solver = two_sum()
+nums = [2,7,3,5]
+target = 9
+res=list(solver.two_sums(nums,target))
+print(res)
