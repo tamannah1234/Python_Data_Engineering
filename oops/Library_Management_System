@@ -1,0 +1,28 @@
+class Books:
+    def __init__(self,name,author,sbn,inventory):
+        self.name = name
+        self.author = author
+        self.sbn = sbn
+        self.inventory = inventory
+    
+    def add_books(self,inventory):
+        self.inventory += inventory
+        print(f"Successfully {inventory} book is added to the inventory")
+        
+    def check_inventory(self):
+        print(f"{self.name} : {self.inventory} are available")
+    def Delete_books(self,inventory,name):
+        self.inventory -= inventory
+        print(f"Successfully Deleted {name} of {inventory}")
+        
+
+R1= Books("Think and grow rich","Napolean Hill","100xn",3)
+R1.check_inventory()
+R1.add_books(2)
+R1.check_inventory()
+R2 = Books("Atomic habits","Martew","100zn",10)
+R2.check_inventory()
+R2.add_books(2)
+R2.check_inventory()
+R2.Delete_books(2,"Atomic_habits")
+R2.check_inventory()
