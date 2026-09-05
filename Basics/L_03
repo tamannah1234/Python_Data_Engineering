@@ -1,0 +1,23 @@
+# class Operation:
+#     def multiplication(self,a,b):
+#         return a*b
+        
+# ops = Operation()
+# a = int(input("Enter first num "))
+# b= int(input("Enter second num"))
+# result = ops.multiplication(a,b)
+# print("Result :",result)
+
+
+# num =5
+# while(num >=0):
+#   print(num)
+#   num -= 1
+
+#Factorial
+# num = int(input("Enter the number :"))
+# fact=1
+# for i in range(1,num+1):
+#     fact = fact*i
+#     print(fact)
+
