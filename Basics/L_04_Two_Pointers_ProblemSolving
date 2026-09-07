@@ -1,0 +1,16 @@
+#Two sum solve ->Two pointers(Using Hashmap as list can be unsorted)
+#Two pointers approach if list is sorted
+
+class Solutions:
+    def two_sum(self,nums:list[int],target: int)->list[int]:
+        seen ={}
+        for i,num in enumerate(nums):
+            complement = target - nums[i]
+            if complement in seen:
+                return [seen[complement],i]
+            
+            seen[num] = i
+            
+Sol = Solutions()
+res=Sol.two_sum([1,2,5,3,2],3)
+print(res)
