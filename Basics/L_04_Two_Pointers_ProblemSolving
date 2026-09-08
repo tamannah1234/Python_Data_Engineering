@@ -38,5 +38,13 @@ class Solution:
 
         return True
 
+##optimize but take an extra space for storing cleanstr
+
+        cleanstr = ""
+        for i in s:
+            if i.isalnum():
+                cleanstr += i.lower()
+
+        return cleanstr == cleanstr[::-1] 
 
         
