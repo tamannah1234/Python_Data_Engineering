@@ -1,0 +1,35 @@
+dict1 = {1:"Tam",2:"Ram",3:"Sham"}
+for i,j in dict1.items():
+  print(i,"->", j)
+
+for i in dict1.keys():
+  print(i, end = " ")
+
+print(dict1.get(2))
+
+set1 = {1,2,3,4,5,6,7,8,9,9}
+print(type(dict1))
+set2 = set()
+dict2 = {1:"Raj",2:"Shyam"}
+for i in set1:
+  if i % 2==0:
+    set2.add(i)
+print(set1)
+print(set2)
+
+
+#Frequency count using dictionary
+
+list1 = [2,2,4,4,5,5,5,9]
+freq = {}
+for i in list1:
+  if i in freq:
+    freq[i] +=1
+  else:
+    freq[i]=1
+
+for i,j in freq.items():
+  print(f"{i} is {j} times")
+
+
+
