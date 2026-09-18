@@ -1,0 +1,31 @@
+
+#Kadanes algorithm
+#Is it possible to carry subarry further or should be start new subarry
+
+def max_subarrySum(arr):
+    curr_sum = arr[0]
+    max_sum = arr[0]
+    
+    for i in range(1,len(arr)):
+        curr_sum = max(arr[i],curr_sum+arr[i])
+        max_sum = max(max_sum,curr_sum)
+        
+    return max_sum
+    
+arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+print(max_subarrySum(arr)) 
+
+#Two sum tar - curr[i]
+arr2=[1,2,34,10,9,8]
+target = 19
+def two_sum(arr2,target):
+    dict = {}
+    for i in range(len(arr2)):
+        complement = target - arr2[i]
+        if complement in dict:
+            return [dict[complement],i]
+        dict[arr2[i]] = i
+     
+    return [-1,-1]   
+print(two_sum(arr2,target))
+    
