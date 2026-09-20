@@ -1,0 +1,51 @@
+#Two sum using Two pointers approach for sorted array
+
+def twoSum(arr,target):
+    left =0
+    right = len(arr)-1
+    for i in range(right):
+        sum=arr[left]+arr[right]
+        if sum== target:
+            return [left,right]
+        elif(sum<target):
+            left +=1
+        elif(sum>target):
+            right -=1
+    return [-1,-1]
+    
+arr = [2, 7, 11, 15]
+Target= 13
+res=twoSum(arr,Target)
+print(res)
+
+#Q2. Longest Substring Without Repeating Characters
+
+str = "abcabcbb"
+def substring(str):
+    left = 0
+    seen = set()
+    max_len = 0
+    
+    for right in range(len(str)):
+        if str[right] in  seen:
+            seen.remove(str[left])
+            left +=1
+        seen.add(str[right])
+        
+        max_len = max(max_len,right-left+1)
+    return max_len
+    
+res=substring(str)
+print(res)
+    
+
+        
+    
+    
+    
+    
+    
+    
+    
+        
+    
