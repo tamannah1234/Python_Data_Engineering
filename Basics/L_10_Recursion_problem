@@ -1,0 +1,19 @@
+#Base case : n<=1 return 1
+#Recursive case return n* fact(n-1)
+
+def factorial(n):
+    if n<=1:
+        return 1
+    return n*factorial(n-1)
+    
+res=factorial(5)
+print(res)
+
+#Sum of first n natural number
+def sum_natural_number(n):
+    if n==0:
+        return 0
+    return n+sum_natural_number(n-1)
+    
+res1 = sum_natural_number(10)
+print(res1)
