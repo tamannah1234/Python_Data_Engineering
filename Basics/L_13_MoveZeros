@@ -12,4 +12,17 @@ while count !=0:
     count -=1
         
 print(res)
-    
+
+
+#First Non Repeating character
+n = int(input())
+arr = list(map(int,input().split()))
+#print(arr)
+seen = {}
+for x in arr:
+    seen[x]=seen.get(x,0)+1
+
+for y in seen:
+    if seen[y]==1:
+        print(y)
+        break
