@@ -24,7 +24,8 @@ def strCompress(chars):
     return chars
     
 res=strCompress(["a","a","b","b","c"])
+print("".join(res[:]))
 # print(res)
-for i in res:
-    print(i ,end='')
+# for i in res:
+#     print(i ,end='')
             
