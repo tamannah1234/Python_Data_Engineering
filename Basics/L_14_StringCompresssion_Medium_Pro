@@ -1,3 +1,10 @@
+#How to take input
+#   chars = list(map(int,input().split()))
+#   chars = list(input().strip())
+#   n = int(input())
+
+
+
 def strCompress(chars):
     #two pointers
     n = len(chars)
