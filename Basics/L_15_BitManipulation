@@ -1,0 +1,29 @@
+
+# n = int(input("enter number to check even or odd"))
+# res=n & 1
+# if res==0:
+#     print("even number")
+# else:
+#     print("odd number")
+
+
+# print(5^3)
+
+#Find unique element
+arr = [2, 3, 2, 4, 3]
+
+result = 0
+for num in arr:
+    result = result ^ num
+
+print(result)
+
+#Toggle bit 
+n = int(input("Enter num"))
+res = n^1
+print(res)
+
+#How to swap number
+n = [1,2,3,4]
+n[0],n[1]=n[1],n[0]
+print(n)
