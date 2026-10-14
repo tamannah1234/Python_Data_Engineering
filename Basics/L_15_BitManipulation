@@ -27,3 +27,11 @@ print(res)
 n = [1,2,3,4]
 n[0],n[1]=n[1],n[0]
 print(n)
+
+#Count set bit in num 
+count=0
+num = 5
+while num >0:
+    num = num &(num-1)
+    count +=1
+print(count)
